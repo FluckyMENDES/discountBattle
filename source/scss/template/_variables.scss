@@ -1,0 +1,96 @@
+
+// Разрешения
+$mobile-width: 410px;
+$mobile-padding: 20px;
+$mobile: $mobile-width + $mobile-padding + $mobile-padding;
+
+$tablet-width: 950px;
+$tablet-padding: 30px;
+$tablet: $tablet-width + $tablet-padding + $tablet-padding;
+
+$laptop-width: 902px;
+$laptop-padding: 20px;
+$laptop: $laptop-width + $laptop-padding + $laptop-padding;
+
+$desktop-width: 1170px;
+$desktop-padding: 20px;
+$desktop: $desktop-width + $desktop-padding + $desktop-padding;
+
+
+// 1. Global
+// ---------
+
+$main-color: #ffd426;
+$secondary-color: #008aff;
+$reserve-color: #d60505;
+$success-color: #37bb0f;
+$warning-color: #ffae00;
+$alert-color: #d60505;
+$light-gray: #e8e8e8;
+$medium-gray: #929292;
+$dark-gray: #333333;
+$black: #0a0a0a;
+$white: #fefefe;
+$background-color: $white;
+$border-color: #e5e5e5;
+
+// 2. Typography
+// -------------
+
+$main-font: 'Gotham', "Arial", sans-serif;
+$secondary-font: 'Gotham', 'Arial', sans-serif;
+$font-color: $black;
+$font-weight: normal;
+$font-size: 16px;
+$desktop-font-size: 16px;
+$line-height: 1.25;
+$heading-font: 'Gotham', 'Arial', sans-serif;
+$heading-line-height: 1;
+$heading-letter-spacing: 1;
+$h1-font-size: 48px;
+$h2-font-size: 36px;
+$h3-font-size: 30px;
+$h4-font-size: 21px;
+$h5-font-size: 18px;
+$h6-font-size: 12px;
+
+
+$small-font-color: $medium-gray;
+$link-text-decoration: none;
+$link-color: $font-color;
+$link-color-visited: $link-color;
+$link-color-hover: $white;
+$link-color-active: $link-color-hover;
+
+// 3. Input
+// ----------
+
+$input-width: 100%;
+$input-font-size: 18px;
+$input-padding: 9px 17px 10px;
+$input-line-height: 1;
+$input-border: 2px solid $border-color;
+$input-border-color-hover: darken($border-color, 10%);
+$input-background-color-hover: darken($border-color, 10%);
+$input-placeholder-color: $black;
+
+
+$checkbox-width: 16px;
+$checkbox-height: 16px;
+$checkbox-border: 2px solid $main-color;
+$checkbox-background-color: transparent;
+$checkbox-border-color-hover: darken($main-color, 10%);
+$checkbox-background-color-hover: darken($main-color, 10%);
+
+$radio-size: 50px;
+$radio-border-radius: 50%;
+$radio-border: $input-border;
+$radio-background-color: $white;
+$radio-border-color-hover: $input-border-color-hover;
+$radio-background-color-hover: $input-background-color-hover;
+
+// 4. Additional
+// ----------
+
+$animate-short: 0.2s all ease-in-out;
+$animate-long: 1s all ease-in-out;

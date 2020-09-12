@@ -1,0 +1,45 @@
+// Glide Slider
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Шаблонные стили
+@import "template/_normalize.scss";
+@import "template/_variables.scss";
+@import "template/_mixin.scss";
+
+@import "template/_fonts.scss";
+@import "template/_common.scss";
+@import "template/_container.scss";
+@import "template/_button.scss";
+@import "template/_input.scss";
+@import "template/_body.scss";
+@import "template/_select.scss";
+@import "template/_accordion.scss";
+@import "template/_button.scss";
+@import "template/_text.scss";
+@import "template/_modal.scss";
+@import "template/_keyframes.scss";
+
+// Общие блоки для всех страниц
+@import "common/_header.scss";
+@import "common/_menu.scss";
+@import "common/_content.scss";
+@import "common/_footer.scss";
+@import "common/_heading.scss";
+@import "common/_thanks.scss";
+
+// index.html
+@import "index/_title.scss";
+@import "index/_duration.scss";
+@import "index/_categories.scss";
+@import "index/_advantages.scss";
+@import "index/_road.scss";
+@import "index/_road-item.scss";
+@import "index/_road-parallax.scss";
+@import "index/_badge.scss";
+@import "index/_campaign.scss";
+@import "index/_rates.scss";
+@import "index/_faq.scss";
+@import "index/_title-parallax.scss";
+@import "index/_enroll.scss";
+@import "index/_organizer.scss";
+@import "index/_feedback.scss";

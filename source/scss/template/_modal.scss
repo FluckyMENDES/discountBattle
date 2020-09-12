@@ -1,0 +1,141 @@
+// Модальное окно
+// Черный фон
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  overflow: hidden;
+  // Скрываем попап
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease;
+
+  // Показываем попап
+  &--active {
+      opacity: 1;
+      visibility: visible;
+      overflow-y: auto;
+  }
+
+  // Лейбл уезжает
+  & input[type="text"] + label,
+  & input[type="password"] + label,
+  & input[type="number"] + label,
+  & input[type="email"] + label {
+    position: absolute;
+    top: 20%;
+    left: 24px;
+    transform: translateY(-50%);
+    transition: 0.3s all ease;
+    font-size: 12px;
+  }
+
+  // Лейбл в спокойном состоянии
+  & input:placeholder-shown[type="text"] + label,
+  & input:placeholder-shown[type="password"] + label,
+  & input:placeholder-shown[type="number"] + label,
+  & input:placeholder-shown[type="email"] + label {
+    top: 55%;
+    font-size: 18px;
+    color: $medium-gray;
+  }
+}
+
+// Центровка модального окна
+.modal__body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Основной попап
+.modal__content {
+    position: relative;
+    background-color: $white;
+    padding: 55px 20px 20px;
+    text-align: center;
+    min-width: 320px;
+    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.8s ease;
+    transform: translate(0, -100%) rotateX(90deg);
+    opacity: 0;
+}
+
+// Открытый попап
+.modal--active .modal__content {
+    transform: translate(0) rotateX(0);
+    opacity: 1;
+}
+
+// Кнопка закрытия модального окна
+.modal__button {
+  padding: 10px 15px;
+  background-color: $main-color;
+  color: $white;
+
+  &--close {
+    // width: 47%;
+    background-color: $secondary-color;
+
+    // Прячем полный текст кнопки
+    & span {
+        display: none;
+
+        // Показываем от планшета для доступности
+        @include tablet {
+            display: inline;
+        }
+    }
+
+    // Трансформируем кнопку от планшета
+    @include tablet {
+        position: absolute;
+        right: -60px;
+        top: 50px;
+        font-size: 0;
+        background-color: transparent;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        width: 26px;
+        height: 26px;
+        border: none;
+
+        // Первая палочка иконки "Х"
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 2px;
+            height: 36px;
+            background-color: $white;
+            transform: translate(-50%, -50%)
+                        rotate(45deg);
+
+        }
+
+        // Вторая палочка иконки "Х"
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 36px;
+            height: 2px;
+            background-color: $white;
+            transform: translate(-50%, -50%)
+                        rotate(45deg);
+        }
+    }
+  }
+}
+
+
+.modal__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}

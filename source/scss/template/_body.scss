@@ -1,0 +1,14 @@
+.body {
+  position: relative;
+
+  // Для прижатия футера к низу страницы
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+
+	&--lock {
+		overflow: hidden;
+	}
+}

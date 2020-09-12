@@ -1,0 +1,100 @@
+.faq {
+  padding-top: 120px;
+  padding-bottom: 110px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2605px' height='747px'%3E%3Cpath fill-rule='evenodd' fill='rgb(68, 169, 255)' d='M2604.355,187.104 L1815.863,686.834 L2604.665,0.285 L2604.355,187.104 ZM161.964,313.417 L988.989,746.406 L0.019,406.559 L161.964,313.417 Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top -15vw center;
+  background-size: 105vw;
+}
+
+.faq__container {
+  text-align: center;
+}
+
+.faq__title {
+  margin-bottom: 110px;
+
+  &::before {
+    background-color: $main-color !important;
+  }
+}
+
+.faq__accordion {
+  background-color: $white;
+  margin-left: 70px;
+  margin-right: 70px;
+
+  @include df-tablet {
+    margin: 0;
+  }
+}
+
+.faq__list {
+  box-shadow: 3px 5px 15px 0px rgba(0, 0, 0, 0.2)
+}
+
+.faq__item {
+  color: $black;
+  text-align: left;
+  border-bottom: 1px solid #e2ecf5;
+}
+
+.faq__trigger {
+  display: flex;
+  justify-content: space-between;
+
+  text-align: left;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  background-color: $white;
+  color: $black;
+  transition: $animate-short;
+
+  &:hover,
+  &:focus {
+    background-color: #e2ecf5;
+  }
+
+  @include df-tablet {
+    font-size: 18px;
+  }
+
+  @include df-mobile {
+    font-size: 16px;
+  }
+}
+
+.faq__icon {
+  fill: $main-color;
+  transform: rotate(90deg);
+  transition: $animate-short;
+  min-width: 25px;
+  margin-left: 10px;
+}
+
+.accordion__item--active .faq__icon {
+  fill: #e2ecf5;
+  transform: rotate(270deg);
+}
+
+.faq__content {
+  text-align: left;
+
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  color: $black;
+  background-color: #e2ecf5;
+
+  @include df-tablet {
+    font-size: 16px;
+  }
+
+  @include df-mobile {
+    font-size: 13px;
+  }
+
+}

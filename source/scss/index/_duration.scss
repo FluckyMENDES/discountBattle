@@ -1,0 +1,53 @@
+.duration {
+  padding-top: 120px;
+  padding-bottom: 110px;
+
+  @include df-tablet {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+
+.duration__container {
+  text-align: center;
+}
+
+.duration__title {
+  margin-bottom: 90px;
+}
+
+.duration__list {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  @include df-tablet {
+    flex-direction: column;
+  }
+}
+
+.duration__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 1 320px;
+  padding-bottom: 40px;
+}
+
+.duration__number {
+  margin-bottom: 35px;
+}
+
+.duration__subtitle {
+  margin-bottom: 30px;
+}
+
+.duration__text {
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.duration__link {
+  font-size: 15px;
+  text-decoration: underline;
+}

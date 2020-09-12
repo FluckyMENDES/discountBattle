@@ -1,0 +1,177 @@
+html {
+  // Для прижатия футера к низу страницы
+  height: 100%;
+}
+
+body {
+  background-color: $background-color;
+  font-family: $main-font;
+  color: $font-color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-size: $font-size;
+  letter-spacing: 0;
+
+  .secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    h1 {
+      color: $white;
+    }
+
+    h2 {
+      color: $white;
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    h4 {
+      color: $white;
+    }
+
+    h5 {
+      color: $white;
+    }
+
+    h6 {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+
+      &:visited {
+        color: $white;
+      }
+
+      // &:hover {
+      //     // color: $link-color-hover;
+      // }
+
+      // &:active,
+      // &:focus {
+      //     // color: $link-color-active;
+      // }
+    }
+  }
+
+  @include desktop {
+    font-size: $desktop-font-size;
+  }
+}
+
+h1 {
+  font-family: $heading-font;
+  font-size: $h1-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+h2 {
+  font-family: $heading-font;
+  font-size: $h2-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+h3 {
+  font-family: $heading-font;
+  font-size: $h3-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+h4 {
+  font-family: $heading-font;
+  font-size: $h4-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+h5 {
+  font-family: $heading-font;
+  font-size: $h5-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+h6 {
+  font-family: $heading-font;
+  font-size: $h6-font-size;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $heading-letter-spacing;
+}
+
+a {
+  text-decoration: $link-text-decoration;
+  color: $link-color;
+
+  // &:visited {
+  //     color: $link-color-visited;
+  // }
+
+  // &:hover {
+  //     color: $link-color-hover;
+  // }
+
+  // &:active,
+  // &:focus {
+  //     color: $link-color-active;
+  // }
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-family: $main-font;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.visually-hidden {
+position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

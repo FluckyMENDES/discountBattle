@@ -1,0 +1,123 @@
+// Блок с этикетками
+.badge {
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  color: $white;
+  transform: translateX(-50%);
+
+  @include df-mobile {
+    min-width: 100%;
+  }
+}
+
+// Текст первого бейджа
+.badge__desc {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+
+  @include df-tablet {
+    font-size: 14px;
+  }
+
+  @include df-mobile {
+    padding-left: 20px;
+    padding: 20px;
+    background-color: #d60505;
+    margin-bottom: -5px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  // Этикетка первого бейджа
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 95vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='703px' height='219px'%3E%3Cpath fill-rule='evenodd' fill='rgb(214, 5, 5)' d='M703.000,-0.001 L370.000,218.999 L-0.000,48.000 L703.000,-0.001 Z'/%3E%3C/svg%3E");    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center 50%;
+
+    @include df-tablet {
+      top: 80%;
+      background-size: 100vw;
+    }
+
+    @include df-mobile {
+      // top: 80%;
+      display: none;
+    }
+  }
+}
+
+// Второй бейдж
+.badge__contrast {
+  display: block;
+  width: 90%;
+  font-size: 21px;
+  font-weight: 700;
+  background-color: $secondary-color;
+  padding: 10px 15px;
+  box-shadow: 3px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  margin: 0 auto 25px;
+  // margin-bottom: 25px;
+
+
+  @include df-tablet {
+    font-size: 18px;
+  }
+}
+
+// Текст основного бейджа
+.badge__main {
+  position: relative;
+  display: block;
+  font-size: 3.15vw;
+  font-weight: 900;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+
+  @include df-tablet {
+    // font-size: 40px;
+    font-size: 22px;
+  }
+
+  @include df-mobile {
+    font-size: 14px;
+  }
+
+  // Этикетка основного бейджа
+  &::before {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 40%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1398px' height='460px'%3E%3Cpath fill-rule='evenodd' fill='rgb(222, 40, 31)' d='M1074.000,460.000 L-0.000,275.999 L1398.000,-0.001 L1074.000,460.000 Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+
+    @include df-tablet {
+      background-size: 80%;
+      top: 0;
+    }
+
+    @include df-mobile {
+      left: 45%;
+    }
+  }
+}

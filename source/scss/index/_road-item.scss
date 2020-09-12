@@ -1,0 +1,23 @@
+.road-item {
+  // background: $white;
+}
+.road-item__title {
+  margin-bottom: 25px;
+
+  @include df-tablet {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+.road-item__text {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+  max-width: 515px;
+
+  @include df-tablet {
+    font-size: 15px;
+    max-width: 350px;
+  }
+}

@@ -1,0 +1,67 @@
+.enroll {
+}
+
+.enroll__content {
+  padding: 55px 20px 30px;
+}
+
+
+
+.enroll__title {
+  margin-bottom: 5px;
+}
+.enroll__subtitle {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.enroll__form {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @include df-tablet {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding: 0;
+
+  }
+
+  @include df-mobile {
+    padding: 0;
+  }
+}
+
+.enroll input {
+}
+
+.enroll__wrapper {
+  margin-bottom: 20px;
+}
+.enroll__name {
+}
+.enroll__mail {
+}
+.enroll__phone {
+}
+.enroll__company {
+}
+.enroll__button {
+  width: 100%;
+  margin-bottom: 10px;
+
+  @include df-mobile {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+}
+.enroll__disclaimer {
+  display: block;
+  max-width: 60%;
+  font-size: 10px;
+  margin: 0 auto 20px;
+
+  @include df-tablet {
+    max-width: 100%;
+  }
+}
+

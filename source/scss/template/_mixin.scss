@@ -1,0 +1,66 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Миксины - mobile-first
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+// @mixin laptop {
+//   @media (min-width: $laptop) and (max-width: $desktop - 1) {
+//     @content;
+//   }
+// }
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Миксины - desktop-first
+@mixin df-mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin df-tablet {
+  @media (max-width: $tablet - 1) {
+    @content;
+  }
+}
+
+@mixin df-laptop {
+  @media (max-width: $desktop - 1) {
+    @content;
+  }
+}
+
+@mixin df-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// @mixin more-$media-width {
+//   @media (min-width: $media-width) {
+//     @content;
+//   }
+// }

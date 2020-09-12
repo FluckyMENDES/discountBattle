@@ -1,0 +1,118 @@
+// Контейнер
+.title {
+  background-color: $main-color;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2851px' height='2077px'%3E%3Cpath fill-rule='evenodd' fill='%23ffb628' d='M1750.863,686.834 L2539.665,0.284 L2539.355,187.104 L1750.863,686.834 ZM161.964,221.417 L988.989,654.406 L0.019,314.559 L161.964,221.417 ZM398.199,2076.946 L350.146,1896.412 L982.431,1209.633 L398.199,2076.946 ZM2689.055,1661.999 L1862.029,1229.010 L2851.000,1568.858 L2689.055,1661.999 Z'/%3E%3C/svg%3E");  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+
+.title__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 95px;
+
+  @include df-tablet {
+    padding-top: 80px;
+  }
+}
+
+// Центральное изображение со слоганом
+.title__image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+
+  // Красный треугольник - подложка
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    display: block;
+    width: 836px;
+    height: 357px;
+    // background-color: red;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='836px' height='357px'%3E%3Cpath fill-rule='evenodd' fill='rgb(242, 28, 17)' d='M626.482,356.234 L-0.000,161.000 L836.000,-0.001 L626.482,356.234 Z'/%3E%3C/svg%3E");    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    // overflow: hidden;
+    transform: translate(-50%, -50%);
+    transition: $animate-long;
+
+    @include df-tablet {
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    @include df-mobile {
+      transform: translate(-50%, -50%) scale(0.25);
+    }
+  }
+}
+
+// Два лейбла
+.title__label {
+  z-index: 1;
+  font-size: 24px;
+  margin-bottom: 10px;
+
+  @include df-mobile {
+    font-size: 16px;
+  }
+
+  // Верхний
+  &--white {
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: $white;
+    padding: 15px 18px 12px;
+
+    @include df-mobile {
+      padding: 5px 8px;
+    }
+  }
+
+  // Нижний
+  &--blue {
+    background-color: $secondary-color;
+    letter-spacing: 1.25px;
+    padding: 6px 14px;
+    color: $white;
+    transform: rotate(-2deg);
+
+  }
+}
+
+// Слоган "Масштабной осенней распродажи
+.title__slogan {
+  z-index: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+// Заголовок
+.title__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+// Текст
+.title__text {
+  max-width: 570px;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.title__link {
+
+}

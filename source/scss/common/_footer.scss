@@ -1,0 +1,38 @@
+.footer {
+  // Для прижатия футера к низу страницы
+  flex: 0 0 auto;
+  background-color: $main-color;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__link {
+  margin-bottom: 20px;
+  letter-spacing: 0.25px;
+  transition: $animate-short;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+
+    & svg {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.footer__logo {
+  min-width: 175px;
+  margin-bottom: 20px;
+  transition: $animate-short;
+}
+
+.footer__copyright {
+  text-align: center;
+}

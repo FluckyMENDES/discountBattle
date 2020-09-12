@@ -1,0 +1,61 @@
+<section class="feedback body__feedback" id="feedback">
+  <div class="feedback__container container">
+    <h3 class="feedback__title" data-aos="fade-up">Остались вопросы?</h3>
+    <p class="feedback__text">
+      Мы всегда рады обсудить с вами подробности.
+      <br>
+      Свяжитесь с нами по указанным контактам или оставьте свои контактные данные в форме!
+    </p>
+    <ul class="feedback__list">
+      <li class="feedback__item feedback__item--phone">
+        <a class="feedback__link" href="tel:+73517506729">
+          <div class="feedback__icon"></div>
+          <span class="feedback__caption">+7 (351) 750-67-29</span>
+        </a>
+      </li>
+      <li class="feedback__item feedback__item--address">
+        <a class="feedback__link" href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_vorovskogo_15g/YkgYdQ5jTkAHQFtvfX10dXhibQ==/?ll=61.393750%2C55.154419&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=16" target="_blank" rel="noopener">
+          <div class="feedback__icon"></div>
+          <span class="feedback__caption">
+            г. Челябинск
+            <br>
+            ул. Воровского 15-г, 5 этаж
+          </span>
+        </a>
+      </li>
+      <li class="feedback__item feedback__item--mail">
+        <a class="feedback__link" href="mailto:bitvaskidok@gmail.com">
+          <div class="feedback__icon"></div>
+          <span class="feedback__caption">
+            bitvaskidok@gmail.com
+          </span>
+        </a>
+      </li>
+    </ul>
+    <form class="feedback__form form" novalidate action="mail.php" method="POST">
+      <div class="feedback__row">
+        <div class="input__wrapper">
+          <input class="feedback__name input--validate" id="feedback__name" name="name" placeholder="Имя" type="text">
+          <span class="input__error"></span>
+        </div>
+        <div class="input__wrapper">
+          <input class="feedback__mail input--validate" id="feedback__mail" name="email" placeholder="E-mail" type="email">
+          <span class="input__error"></span>
+        </div>
+        <div class="input__wrapper">
+          <input class="feedback__phone input--validate input--phone" id="feedback__phone" name="phone" placeholder="Телефон" type="tel" minlength="18">
+          <span class="input__error"></span>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input class="feedback__company" id="feedback__company" name="company" placeholder="Название компании" type="text">
+        <span class="input__error"></span>
+      </div>
+      <div class="input__wrapper feedback__textarea">
+        <textarea class="feedback__comment input--validate" name="text" id="text" rows="7" placeholder="Сообщение" ></textarea>
+        <span class="input__error"></span>
+      </div>
+      <button class="feedback__button button button--main" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>

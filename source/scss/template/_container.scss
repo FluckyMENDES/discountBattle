@@ -1,0 +1,22 @@
+.container {
+	width: 100%;
+	// max-width: $tablet-width;
+	margin: 0 auto;
+	// padding-left: $mobile-padding;
+  // padding-right: $mobile-padding;
+  max-width: $desktop-width + $laptop-padding + $laptop-padding;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+	// @include desktop {
+	// 	max-width: $desktop-width;
+	// 	padding-left: $desktop-padding;
+	// 	padding-right: $desktop-padding;
+  // }
+
+  @include df-laptop {
+    padding-left: $laptop-padding;
+    padding-right: $laptop-padding;
+  }
+
+}

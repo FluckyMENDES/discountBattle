@@ -1,0 +1,29 @@
+<section class="enroll modal" id="enroll">
+  <div class="modal__body">
+    <div class="enroll__content modal__content">
+      <h4 class="enroll__title">Оставьте заявку</h4>
+      <span class="enroll__subtitle">и мы свяжемся с вами в течение 24-х часов</span>
+      <form class="enroll__form form" novalidate action="https://echo.htmlacademy.ru" method="POST">
+        <div class="enroll__wrapper input__wrapper">
+          <input class="enroll__name input--validate" type="text" name="name" id="enroll__name" placeholder="Ваше имя">
+          <span class="input__error"></span>
+        </div>
+        <div class="enroll__wrapper input__wrapper">
+          <input class="enroll__mail input--validate" type="email" name="email" id="enroll__mail" placeholder="E-mail">
+          <span class="input__error"></span>
+        </div>
+        <div class="enroll__wrapper input__wrapper">
+          <input class="enroll__phone input--validate input--phone" type="tel" name="phone" id="enroll__phone" placeholder="Номер телефона" minlength="18">
+          <span class="input__error"></span>
+        </div>
+        <div class="enroll__wrapper input__wrapper">
+          <input class="enroll__company" type="text" name="company" id="enroll__company" placeholder="Организация">
+          <span class="input__error"></span>
+        </div>
+        <button class="enroll__button button button--main" type="submit">Отправить заявку</button>
+      </form>
+      <span class="enroll__disclaimer">Ваши контактные данные в безопасности и будут использованы только для связи с Вами.</span>
+      <button class="modal__button modal__button--close modal-close button" type="button">Закрыть<span> модальное окно</span></button>
+    </div>
+  </div>
+</section>

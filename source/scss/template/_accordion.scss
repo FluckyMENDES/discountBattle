@@ -1,0 +1,38 @@
+.accordion {
+  // margin-top: 10px;
+}
+
+.accordion__item {
+  // margin-bottom: 20px;
+  overflow: hidden;
+
+  &--active .accordion__content {
+    position: relative;
+    opacity: 1;
+    max-height: 100vh;
+    transform: translateY(0);
+    z-index: 0;
+    margin-top: 0;
+  }
+
+  &--active .accordion__trigger {
+  }
+}
+
+.accordion__trigger {
+  display: block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.accordion__content {
+  overflow: hidden;
+  margin-top: -40px;
+  max-height: 0;
+  z-index: -1;
+  opacity: 0;
+  transform: translateY(-120%);
+  transition: 0.5s all;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}

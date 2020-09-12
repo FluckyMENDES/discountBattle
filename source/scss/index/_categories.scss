@@ -1,0 +1,66 @@
+.categories {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2851px' height='2077px'%3E%3Cpath fill-rule='evenodd' fill='rgba(0, 0, 0, 0.10)' d='M1750.863,686.834 L2539.665,0.284 L2539.355,187.104 L1750.863,686.834 ZM161.964,221.417 L988.989,654.406 L0.019,314.559 L161.964,221.417 ZM398.199,2076.946 L350.146,1896.412 L982.431,1209.633 L398.199,2076.946 ZM2689.055,1661.999 L1862.029,1229.010 L2851.000,1568.858 L2689.055,1661.999 Z'/%3E%3C/svg%3E");  background-repeat: no-repeat;
+  background-position: center;
+
+  @include df-tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    background-size: 140% 70%;
+  }
+}
+.categories__container {
+  text-align: center;
+}
+.categories__title {
+  margin-bottom: 100px;
+}
+.categories__list {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+  margin-bottom: 50px;
+
+  @include df-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include df-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  @include df-mobile {
+    // padding-bottom: 5px;
+  }
+}
+.categorues__icon {
+  fill: $white;
+  margin-bottom: 30px;
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.25));
+}
+.categories__caption {
+  letter-spacing: 0.25px;
+  max-width: 155px;
+}
+.categories__text {
+  margin-bottom: 60px;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+
+  @include df-tablet {
+    font-size: 18px;
+  }
+}
+.categories__link {
+  display: inline-block;
+}

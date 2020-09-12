@@ -1,0 +1,32 @@
+.h2 {
+  position: relative;
+  display: inline-flex;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  text-align: center;
+  z-index: 0;
+
+  @include df-tablet {
+    font-size: 30px;
+  }
+
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 102%;
+    height: 20px;
+    background-color: $main-color;
+    transform: translateX(-50%);
+  }
+}
+
+.secondary .h2 {
+  &::before {
+    background-color: #32b228;
+  }
+}

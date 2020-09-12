@@ -1,0 +1,127 @@
+.button {
+  font-size: 18px;
+	color: $black;
+
+	border: none;
+
+  // transition: 0.2s all ease;
+  cursor: pointer;
+
+  // &:hover,
+  // &:focus {
+    // background-color: #d5cabe;
+  // }
+
+  // &:active {
+    // color: rgba(0,0,0,0.3);
+
+    // background-color: #d5c9bd;
+  // }
+
+  // Кнопка "Х"
+  &--cross {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+
+    // Иконка
+    & .button__icon {
+      fill: $white;
+      opacity: 0;
+      transform: rotate(180deg);
+      transition: 0.2s all ease;
+      transition-delay: 0.6s;
+    }
+  }
+
+  // Кнопка "Бургер"
+  &--burger {
+
+    // Иконка "Бургер"
+    & .button__icon {
+      position: relative;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+      transition: 0.5s all ease;
+
+      // Верхняя и нижняя линии
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: $black;
+        transition: 0.5s all ease;
+
+      }
+
+      // Верхняя линия
+      &::before {
+        top: -7px;
+      }
+
+      // Верхняя линия
+      &::after {
+        bottom: -7px;
+      }
+    }
+
+    // Иконка при "active" классе у кнопки
+    &.active .button__icon {
+      transform: rotate(-225deg);
+
+      &::before {
+        transform: translateY(7px) rotate(-270deg);
+      }
+      &::after {
+        transform: translateY(-7px);
+        opacity: 0;
+      }
+    }
+  }
+
+	&--main {
+		display: block;
+
+    padding: 25px 45px;
+    border-radius: 7px;
+    background-color: $reserve-color;
+    color: $white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: $animate-short;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color: $reserve-color, $amount: 5%);
+      // box-shadow: 0 5px 10px rgba($color: $black, $alpha: 0.48);
+    }
+
+    &:disabled {
+      background-color: $medium-gray;
+    }
+	}
+
+	&--white {
+		background: $white;
+
+		box-shadow: 0px 5px 25px rgba($color: $white, $alpha: 0.48);
+	}
+
+  &--alternate {
+    color: $white;
+
+    background: $black;
+
+    border: 2px solid $white;
+    box-shadow: 0px 5px 25px rgba($color: $black, $alpha: 0.48);
+  }
+}
+

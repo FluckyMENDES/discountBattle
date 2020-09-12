@@ -1,0 +1,124 @@
+// Блок с картой
+.road {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include df-tablet {
+    // padding-top: 30px;
+  }
+}
+
+// Желтая подложка
+.road__padding {
+  background-color: $main-color;
+  min-height: 436px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 65% 95%, 0% 45%);
+
+  @include df-mobile {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 55%, 0% 45%);
+  }
+}
+
+// Фото
+.road__photo {
+  position: absolute;
+  z-index: -1;
+  top: 260px;
+  left: 0;
+  width: 55vw;
+  height: 660px;
+  background: url('../img/city.jpg') no-repeat left;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 80% 30%, 0% 80%);
+
+  @include df-tablet {
+    width: 80vw;
+    height: 70vw;
+  }
+}
+
+
+// Блок с путем и городами
+.road__content {
+  position: relative;
+  min-height: 1000px;
+  // margin-top: 50px;
+  background-image: url(../img/route.png);
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+
+  @include df-tablet {
+    background-size: 500px;
+    background-position: 70% 40%;
+    min-height: 900px;
+  }
+
+  @include df-mobile {
+    background-image: none;
+    min-height: 0;
+  }
+}
+
+
+// Место и описание
+.road__item {
+  position: absolute;
+
+  // "Челябинск"
+  &:first-child {
+    top: 130px;
+    right: 5vw;
+
+    @include df-tablet {
+      top: 80px;
+      right: 17vw;
+    }
+  }
+
+  // "Область"
+  &:nth-child(2) {
+    top: 350px;
+    left: -20px;
+    text-align: right;
+
+    @include df-mobile {
+      text-align: left;
+    }
+  }
+
+  // "Событие"
+  &:nth-child(3) {
+    top: 840px;
+    left: 22%;
+    text-align: center;
+
+    @include df-tablet {
+      top: 700px;
+    }
+
+    @include df-mobile {
+      text-align: left;
+    }
+  }
+
+  @include df-mobile {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+
+.road__badge {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+}
+
+.road__parallax {
+
+}
+
+.road-parallax {
+
+}
